@@ -62,19 +62,21 @@ public class Jureny {
         }
         net_a_paye=total_HT+TVA-remise;
         
-        System.out.println("=========================FACTURE=================================");
+        System.out.println("----------------------------------------------");
+        System.out.println("                  FACTURE                  ");
+        System.out.println("----------------------------------------------");
         System.out.println("Client: "+nom);
         System.out.println("Numero de telephone: "+numero+"\n");
-        System.out.println("Nom article          Quantite          Prix(USD)");
+        System.out.printf("%-15s %-15s %-15s\n","Nom article","Quantite","Prix(USD)");
         for(int i=0;i<nb_article;i++){
-            System.out.println(nom_article[i]+"          "+quantite[i]+"          "+prix[i]);
+            System.out.printf("%-15s %-15d %-15.2f\n ",nom_article[i],quantite[i],prix[i]);
         }
         System.out.println("------------------------------------------------------------------");
-        System.out.println("\nTotal Hors Taxe: "+total_HT+" USD");
-        System.out.println("Motant de la TVA: "+TVA+" USD");
-        System.out.println("Motant de la remise apliquee: "+remise+" USD");
-        System.out.println("Net a payer: "+net_a_paye+" USD");
-        System.out.println("------------------------------------------------------------------");
+        System.out.printf("\nTotal Hors Taxe(USD):%-15.2f\n ",total_HT);
+        System.out.printf("Motant de la TVA(USD): %-15.2f\n",TVA);
+        System.out.printf("Motant de la remise apliquee(USD): %-15.2f\n",remise);
+        System.out.printf("Net a payer(USD):%-15.2f \n",net_a_paye);
+        System.out.println("===================================================================");
         
             
             
